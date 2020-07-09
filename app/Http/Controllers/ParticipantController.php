@@ -92,9 +92,7 @@ class ParticipantController extends Controller
             return JsonFailResponse::validationError($request->errors());
         }
 
-        if (false === $this->service->update($model, $request->getParticipantDto())) {
-            return JsonErrorResponse::serverError();
-        }
+        $this->service->update($model, $request->getParticipantDto());
 
         return JsonSuccessResponse::success();
     }
