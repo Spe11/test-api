@@ -114,4 +114,5 @@ return [
 
     'password_timeout' => 10800,
 
+    'token' => env('APP_TOKEN'),
 ];
